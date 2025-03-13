@@ -29,14 +29,19 @@ export function TodoForm({ onAddTodo }: TodoFormProps) {
   }
   
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2">
+    <form onSubmit={handleSubmit} className="flex gap-2 p-4 bg-card rounded-xl shadow-sm border border-primary/10">
       <Input
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Add a new task..."
-        className="flex-1"
+        className="flex-1 border-primary/20 focus-visible:ring-primary/30"
       />
-      <Button type="submit" disabled={!text.trim()} aria-label="Add task">
+      <Button 
+        type="submit" 
+        disabled={!text.trim()} 
+        aria-label="Add task"
+        className="shadow-md"
+      >
         <Plus className="size-4 mr-2" />
         Add
       </Button>

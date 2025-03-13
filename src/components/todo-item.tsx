@@ -19,8 +19,10 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
   
   return (
     <div 
-      className={`flex items-center justify-between p-3 rounded-md border ${
-        todo.completed ? "bg-muted" : "bg-card"
+      className={`flex items-center justify-between p-4 rounded-xl border ${
+        todo.completed 
+          ? "todo-card-completed" 
+          : "todo-card"
       }`}
     >
       <div className="flex items-center gap-3 flex-1">
@@ -28,9 +30,14 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
           type="checkbox"
           checked={todo.completed}
           onChange={handleToggle}
-          className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+          className="checkbox-pretty"
         />
-        <span className={`${todo.completed ? "line-through text-muted-foreground" : ""}`}>
+        <span className={`${
+          todo.completed 
+            ? "line-through text-muted-foreground" 
+            : "text-foreground"
+          } transition-all duration-200`}
+        >
           {todo.text}
         </span>
       </div>
@@ -39,7 +46,7 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
         size="icon"
         onClick={handleDelete}
         aria-label="Delete task"
-        className="h-8 w-8 text-muted-foreground hover:text-destructive"
+        className="h-8 w-8 text-muted-foreground hover:text-destructive transition-colors"
       >
         <Trash className="size-4" />
       </Button>
