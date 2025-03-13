@@ -20,7 +20,7 @@ function App() {
           onClick={toggleTheme}
           aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
-          {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          {isDarkMode ? <Sun className="size-5" /> : <Moon className="size-5" />}
         </Button>
       </div>
 

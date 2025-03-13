@@ -1,4 +1,4 @@
-
+@import "tailwindcss";
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -89,7 +89,7 @@
 }
 
 .checkbox-pretty {
-  @apply h-5 w-5 rounded-full cursor-pointer border-2 border-primary/50 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 focus:ring-1 transition-all duration-200;
+  @apply size-5 rounded-full cursor-pointer border-2 border-primary/50 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 focus:ring-1 transition-all duration-200;
 }
 
 .todo-card {

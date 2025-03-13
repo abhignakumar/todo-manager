@@ -35,7 +35,7 @@ export function TodoList({ initialTodos = [] }: TodoListProps) {
       <TodoForm onAddTodo={addTodo} />
       
       <div className="flex items-center gap-2 px-2 text-sm text-muted-foreground">
-        <ListChecks className="h-4 w-4" />
+        <ListChecks className="size-4" />
         {totalCount > 0 ? (
           <p>
             {completedCount} of {totalCount} {totalCount === 1 ? 'task' : 'tasks'} completed

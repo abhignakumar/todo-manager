@@ -46,7 +46,7 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
         size="icon"
         onClick={handleDelete}
         aria-label="Delete task"
-        className="h-8 w-8 text-muted-foreground hover:text-destructive transition-colors"
+        className="size-8 text-muted-foreground hover:text-destructive transition-colors"
       >
         <Trash className="size-4" />
       </Button>
